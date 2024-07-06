@@ -1,0 +1,562 @@
+/* CSS FOR NAV BAR */
+.NavContainer{
+  
+  display: flex;
+  top: 0px;
+  width: 100%;
+  z-index: 100; 
+  position: fixed;
+  justify-content: space-around;
+  
+}
+ .sticky{
+
+  padding: 3px 40px;
+  background: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.MobileMenu {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Example background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.Button1{
+
+
+  margin-left: 40px;
+  margin-top :35px;
+  background-color: transparent;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer; 
+}
+.Button1::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjust the position of the underline */
+  left: 0;
+  width: 100%; /* Extend the underline across the button */
+  height: 2px; /* Thickness of the underline */
+  background-color: rgb(104, 154, 30); /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease; /* Transition effect */
+}
+
+.Button1:hover::after{
+  transform: scaleX(1);
+}
+.active{
+
+  color: rgb(104, 154, 30);
+}
+.Button2{
+
+  margin-left: 30px;
+  margin-top :25px;
+  
+  border: 2px solid transparent; 
+  padding: 10px 20px;          
+  background-color: whitesmoke;    
+  color: black;                
+  border-radius: 5px;          
+  cursor: pointer; 
+  transition: 0.5s;
+  width: 150px;
+}
+.Button2:hover{
+
+  background-color: rgb(189, 211, 155);
+  color: black;
+  font-weight: bold;
+}
+.Button1:hover{
+
+  color:rgb(104, 154, 30);
+  transform: scale(1.1);
+
+}
+.Name{
+   
+  margin-top: 6px;
+  margin-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: green;
+}
+.bars{
+
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 18px;
+  cursor:pointer;
+  display: none;
+  margin-top :35px;
+}
+.bars span{
+
+  width: 100%;
+  height: 3px;
+  background-color: black;
+
+}
+.navbar{
+  position: sticky;
+  
+}
+.MobileMenu button {
+
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: #333; /* Example text color */
+  cursor: pointer;
+}
+
+.MobileMenu button:hover {
+  background-color: #f0f0f0; /* Example hover background color */
+}
+@media  (min-width: 901px) {
+  .MobileMenu {
+    display: none;
+  }
+}
+/* Responsive Ness for NAV Bar */
+@media screen and (max-width: 900px) {
+  .Button1, .Button2 {
+    display: none;
+  }
+  .bars {
+    display: flex;
+  }
+
+}
+
+
+/*  Home section..... */
+.ProfileImage{
+
+  min-height: 40vh;
+  width: 55%;
+  margin-left: 230px;
+  border: 1px solid #ddd; /* Border around the image */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 10px; 
+  background-color: gainsboro;
+  display: block;
+  transition: 0.5s ease-in-out;
+  margin-top: 15px;
+}
+.ProfileImage:hover{
+
+  transform: scale(1.1) ;
+
+}
+.Home-section{
+  
+  margin: 150px;
+  display: flex;
+  flex-direction: row; /* Default to row for larger screens */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; 
+}
+
+.Muaaz{
+
+  color:rgb(104, 154, 30);
+  font-weight: bold;
+  
+}
+.HMuaaz{
+
+  font-size: 65px;
+}
+.r2{
+
+  font-size: 23px;
+}
+.DMuaaz{
+
+  color:rgb(104, 154, 30);
+  font-weight: bold;
+}
+.r3{
+  
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.links{
+
+  margin-top: 80px;
+  display: flex;
+}
+.icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: lightblue;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 40px;
+}
+
+.icon-circle:hover {
+  background-color: lightgray;
+  color: greenyellow;
+}
+/*  Responsiveness of Home Screen */
+@media (max-width: 900px) {
+  .Home-section {
+    flex-direction: column; /* Stack children in a column for smaller screens */
+    text-align: center; /* Center-align text */
+    margin: 50px; /* Adjust margin for smaller screens */
+  }
+  .ProfileImage {
+    width: 80%; /* Adjust image width for smaller screens */
+    margin-left: 0; /* Remove left margin for centered alignment */
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+  .HMuaaz {
+    font-size: 32px; /* Decrease font size for smaller screens */
+  }
+  .r2 {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+  .r3 {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+  .links {
+    margin-top: 40px; /* Adjust margin for smaller screens */
+    justify-content: center; /* Center-align links */
+  }
+  .icon-circle {
+    margin-left: 10px; /* Adjust margin for smaller screens */
+  }
+}
+@media screen and (max-width : 1189px){
+
+  .HMuaaz {
+    font-size: 62px; /* Decrease font size for smaller screens */
+  }
+}
+/*  About Section  */
+
+.About-section{
+
+  margin: 250px;
+}
+.Habout{
+  
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 310px;
+}
+.MyPara{
+
+  
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 35px;
+  max-width: 600px;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 20px auto;
+  letter-spacing: 1px;
+  
+}
+/*  Responsiveness of About Section */
+@media (max-width: 900px) {
+  .About-section {
+    margin: 20px; /* Adjust margin for smaller screens */
+  }
+
+  .Habout {
+    font-size: 32px; /* Decrease font size for smaller screens */
+    margin-top: 30px; /* Adjust margin-top for smaller screens */
+  }
+
+  .MyPara {
+    padding: 25px; /* Decrease padding for smaller screens */
+    font-size: 14px; /* Decrease font size for smaller screens */
+    line-height: 1.5; /* Adjust line height for smaller screens */
+  }
+}
+/*  Skills section.............. */
+.skills {
+  text-align: center;
+  padding: 20px;
+}
+
+.skill-title {
+  margin-bottom: 20px;
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skills-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+  gap: 40px; /* Adjust the gap between items as needed */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.skill-image {
+  width: 80px; /* Adjust as needed */
+  height: auto;
+}
+
+.skill-name {
+  margin-top: 15px;
+  text-align: center;
+}
+.skill-image-cplus {
+  width: 150px; /* Adjust as needed */
+}
+
+.skill-image-csharp {
+  margin-top: -20px;
+  width: 150px; /* Adjust as needed */
+}
+
+.skill-image-mysql {
+  margin-top: -35px;
+  width: 130px; /* Adjust as needed */
+}
+.skill-nameMS{
+
+  margin-top: -10px;
+}
+.skill-item:hover{
+
+  transform: scale(1.1) ;
+}
+/*  Responsive ness of Skill section */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    gap: 20px; /* Adjust the gap for smaller screens */
+  }
+
+  .skill-item {
+    margin-bottom: 20px; /* Increase spacing between items */
+  }
+  
+  .skill-image-csharp {
+    margin-top: 0; /* Reset margin adjustment for C# image */
+  }
+
+  .skill-image-mysql {
+    margin-top: 0; /* Reset margin adjustment for MySQL image */
+  }
+}
+/*  Projects CSS.................... */
+
+.ProjectsSection h1 {
+  margin: 50px 0 20px 0; /* Adjusted margin for better responsiveness */
+  font-size: 45px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Projects-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ; /* Two columns layout */
+  gap: 10px;
+}
+
+.projects-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  transition: 0.5s;
+}
+.projects-item img{
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.projects-item:hover{
+
+  transform: scale(1.1);
+}
+.projects-item p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  margin-top: -10px;
+}
+
+.projects-img {
+  width: 100%; /* Adjusted to make image responsive */
+  max-width: 350px;
+  height: auto;
+}
+
+.projects-item h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 900px) {
+  .ProjectsSection h1 {
+    font-size: 35px; /* Smaller font size for smaller screens */
+    margin: 30px 0 10px 0; /* Adjusted margin for smaller screens */
+  }
+
+  .Projects-grid {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .projects-item {
+    margin: 10px; /* Smaller margin for smaller screens */
+  }
+
+  .projects-img {
+    max-width: 50%; /* Ensure images fit within container */
+  }
+  .projects-item p{
+
+    font-size: 14px;
+  }
+}
+/*  Responsiveness of Projects Section */
+@media (max-width: 480px) {
+  .ProjectsSection h1 {
+    font-size: 25px; /* Smaller font size for very small screens */
+    margin: 20px 0 5px 0; /* Adjusted margin for very small screens */
+  }
+
+  .projects-item {
+    margin: 5px; /* Smaller margin for very small screens */
+  }
+}
+
+
+/*  Contact CSS........... */
+.Contact {
+  margin: 40px;
+}
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 8px;
+  padding: 50px;
+  transition: 0.5s;
+}
+
+.contact-item {
+ 
+ 
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contact-grid h2{
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contact-item p {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.contact-name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  font-size: 20px;
+  color: #666;
+  text-align: center;
+  margin: 20px;
+}
+.afterbox {
+  margin: 180px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #333;
+}
+
+.social-links a:hover {
+  color: #007bff; /* Example hover color */
+}
+
+
+.copyright {
+  font-size: 14px;
+  color: #666;
+  margin: 35px;
+}
+.contact-grid:hover{
+   
+  background-color: aquamarine;
+}
+/*  Responsiveness of Contact Section  */
+@media (max-width: 900px) {
+  .Contact {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .contact-grid {
+    padding: 30px;
+    margin: 20px;
+  }
+  
+  .afterbox {
+    margin: 80px;
+  }
+  
+  .social-links {
+    padding-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .copyright {
+    margin: 10px;
+  }
+}
